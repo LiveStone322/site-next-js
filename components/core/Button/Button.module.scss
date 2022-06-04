@@ -1,0 +1,46 @@
+@use "sass:math";
+
+$padding: 0.375em;
+$min-width: 6em;
+
+.button {
+  display: flex;
+  cursor: pointer;
+  position: relative;
+  background: transparent;
+  min-width: $min-width;
+  border: solid white 2px;
+  z-index: 1;
+  overflow: hidden;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 100%;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    background: blue;
+    transition: all 0.2s ease-out;
+  }
+
+  &:hover::before {
+    top: 0;
+  }
+
+  &:active::before {
+    background: black;
+  }
+
+  &_content {
+    padding: $padding;
+    color: white;
+    font-size: 32px;
+    line-height: 32px;
+  }
+}
+
+.icon {
+  padding: 16px;
+}
