@@ -1,0 +1,81 @@
+@use "/styles/constants.scss" as c;
+
+.header {
+  margin: 2.5em 5em;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 10;
+
+  ul {
+    display: flex;
+    padding: 0;
+    gap: 5em;
+    list-style: none;
+    justify-content: flex-end;
+
+    li {
+      position: relative;
+      font-size: 2rem;
+    }
+
+    li:after {
+      position: absolute;
+      content: "";
+      bottom: -12px;
+      width: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 3px;
+      border-radius: 1px;
+      background: white;
+    }
+
+    li:not(.activeLink):hover:after {
+      animation: elasticWidth 1s linear;
+      width: 100%;
+    }
+
+    li:not(.activeLink):hover * {
+      color: white;
+    }
+
+    li.activeLink * {
+      color: c.$white-inactive;
+    }
+  }
+}
+
+@keyframes elasticWidth {
+  0% {
+    width: 0;
+  }
+
+  16% {
+    width: 132.27%;
+  }
+
+  28% {
+    width: 86.88%;
+  }
+
+  44% {
+    width: 104.63%;
+  }
+
+  59% {
+    width: 98.36%;
+  }
+
+  73% {
+    width: 100.58%;
+  }
+
+  88% {
+    width: 99.8%;
+  }
+
+  100% {
+    width: 100%;
+  }
+}

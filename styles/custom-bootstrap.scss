@@ -1,3 +1,5 @@
+@use "./constants.scss" as c;
+
 .container,
 .container-fluid,
 .container-xxl,
@@ -12,44 +14,44 @@
   margin-left: auto;
 }
 
-@media (min-width: 576px) {
+@media (min-width: c.$bs-sm) {
   .container-sm,
   .container {
-    max-width: 540px;
+    max-width: c.$bs-width-sm;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: c.$bs-md) {
   .container-md,
   .container-sm,
   .container {
-    max-width: 720px;
+    max-width: c.$bs-width-md;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: c.$bs-lg) {
   .container-lg,
   .container-md,
   .container-sm,
   .container {
-    max-width: 960px;
+    max-width: c.$bs-width-lg;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: c.$bs-xl) {
   .container-xl,
   .container-lg,
   .container-md,
   .container-sm,
   .container {
-    max-width: 1140px;
+    max-width: c.$bs-width-xl;
   }
 }
-@media (min-width: 1400px) {
+@media (min-width: c.$bs-xxl) {
   .container-xxl,
   .container-xl,
   .container-lg,
   .container-md,
   .container-sm,
   .container {
-    max-width: 1320px;
+    max-width: c.$bs-width-xxl;
   }
 }
 .row {
@@ -175,7 +177,7 @@
   width: 100%;
 }
 
-@media (min-width: 576px) {
+@media (min-width: c.$bs-sm) {
   .col-sm {
     flex: 1 0 0%;
   }
@@ -280,7 +282,7 @@
     width: 100%;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: c.$bs-md) {
   .col-md {
     flex: 1 0 0%;
   }
@@ -385,7 +387,7 @@
     width: 100%;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: c.$bs-lg) {
   .col-lg {
     flex: 1 0 0%;
   }
@@ -490,7 +492,7 @@
     width: 100%;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: c.$bs-xl) {
   .col-xl {
     flex: 1 0 0%;
   }
@@ -643,7 +645,7 @@
     margin-left: 91.66666667%;
   }
 }
-@media (min-width: 1400px) {
+@media (min-width: c.$bs-xxl) {
   .col-xxl {
     flex: 1 0 0%;
   }
@@ -763,5 +765,3 @@
 .d-flex {
   display: flex !important;
 }
-
-/*# sourceMappingURL=bootstrap-grid.css.map */

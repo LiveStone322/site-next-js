@@ -5,6 +5,7 @@ import LayoutProps from "./LayoutProps";
 
 const Layout = (props: LayoutProps) => {
   const { title, children } = props;
+
   return (
     <>
       <Head>

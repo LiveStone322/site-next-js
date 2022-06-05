@@ -1,8 +1,13 @@
 import type { GetStaticProps, NextPage } from "next";
-import Head from "next/head";
-import Image from "next/image";
-import Button from "../components/core/Button";
+import HomePageContent from "../components/HomePageContent";
 import Layout from "../components/Layout";
+
+import { gsap } from "gsap/dist/gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
+
+gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollToPlugin);
 
 interface HomeProps {
   metaData: any;
@@ -28,7 +33,7 @@ const Home: NextPage<HomeProps> = (props: HomeProps) => {
   const { metaData } = props;
   return (
     <Layout {...metaData}>
-      <Button>Тест</Button>
+      <HomePageContent />
     </Layout>
   );
 };

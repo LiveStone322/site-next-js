@@ -1,15 +1,20 @@
+@use "./constants.scss" as c;
 @import "./fonts";
 
 html,
 body {
   padding: 0;
   margin: 0;
-  color: white;
+  color: c.$white;
   font-family: "FiraSans", sans-serif;
 }
 
+html {
+  font-size: 16px;
+}
+
 body {
-  background: #1e1e1e;
+  background: c.$bg;
 }
 
 a {

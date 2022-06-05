@@ -1,0 +1,22 @@
+$bg: #1e1e1e;
+
+$white: #f1f1f1;
+$white-inactive: #8c8c8c;
+
+$blue: #0038ff;
+$blue-active: #002dcd;
+
+$gradient: linear-gradient(90deg, #f488a1 0%, #db54e7 49.48%, #5db5ce 100%);
+
+$bs-sm: 576px;
+$bs-md: 768px;
+$bs-lg: 992px;
+$bs-xl: 1400px;
+$bs-xxl: 1600px;
+
+$bs-width-sm: $bs-sm - 36px;
+$bs-width-md: $bs-md - 48px;
+$bs-width-lg: $bs-lg - 32px;
+$bs-width-xl: $bs-xl - 60px;
+$bs-width-xxl: $bs-xxl - 80px;
+$bs-max-width: 1320px;
