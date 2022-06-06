@@ -11,9 +11,10 @@ gsap.registerPlugin(ScrollToPlugin);
 
 interface HomeProps {
   metaData: any;
+  context: any;
 }
 
-export const getStaticProps: GetStaticProps<HomeProps> = async () => {
+export const getStaticProps: GetStaticProps<HomeProps> = async (context) => {
   // Call an external API endpoint to get posts
   // const res = await fetch("https://.../posts");
   // const metaData = await res.json();
@@ -25,6 +26,7 @@ export const getStaticProps: GetStaticProps<HomeProps> = async () => {
       metaData: {
         title: "Главная страница",
       },
+      context,
     },
   };
 };
