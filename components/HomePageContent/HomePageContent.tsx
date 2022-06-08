@@ -12,9 +12,9 @@ const HomePageContent = () => {
       return;
     }
     const bodyScrollBar = Scrollbar.init(scroller, {
-      damping: 0.05,
-      delegateTo: document,
+      damping: 0.04,
       alwaysShowTracks: true,
+      continuousScrolling: true,
     });
 
     ScrollTrigger.scrollerProxy("#smooth", {
@@ -32,7 +32,7 @@ const HomePageContent = () => {
 
     gsap.to("#test", {
       scrollTrigger: "#test",
-      x: 100,
+      x: 500,
     });
   }, []);
 
@@ -42,7 +42,7 @@ const HomePageContent = () => {
         <div style={{ marginTop: 1000, marginBottom: 5000 }}>
           HomePageContent
         </div>
-        <div id="test" style={{ marginBottom: 100 }}>
+        <div id="test" style={{ top: 100, position: "absolute" }}>
           Bottom
         </div>
       </div>
