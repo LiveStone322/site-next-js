@@ -1,0 +1,11 @@
+@use "../../../../styles/constants.scss" as c;
+
+.hr {
+  width: 0;
+  margin: 0;
+  height: 3px;
+  border: 0;
+  background-color: c.$white;
+  position: absolute;
+  bottom: -2px;
+}

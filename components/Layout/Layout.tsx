@@ -3,6 +3,8 @@ import React from "react";
 import Header from "../core/Header";
 import LayoutProps from "./LayoutProps";
 
+import classes from "./Layout.module.scss";
+
 const Layout = (props: LayoutProps) => {
   const { title, children } = props;
 
@@ -27,7 +29,7 @@ const Layout = (props: LayoutProps) => {
         />
       </Head>
       <Header />
-      <main>{children}</main>
+      <main className={classes.main}>{children}</main>
     </>
   );
 };

@@ -16,66 +16,19 @@
 
     li {
       position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       font-size: 2rem;
     }
 
-    li:after {
-      position: absolute;
-      content: "";
-      bottom: -12px;
-      width: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      height: 3px;
-      border-radius: 1px;
-      background: white;
-    }
-
-    li:not(.activeLink):hover:after {
-      animation: elasticWidth 1s linear;
-      width: 100%;
-    }
-
     li:not(.activeLink):hover * {
-      color: white;
+      color: c.$white;
     }
 
     li.activeLink * {
       color: c.$white-inactive;
+      cursor: default;
     }
-  }
-}
-
-@keyframes elasticWidth {
-  0% {
-    width: 0;
-  }
-
-  16% {
-    width: 132.27%;
-  }
-
-  28% {
-    width: 86.88%;
-  }
-
-  44% {
-    width: 104.63%;
-  }
-
-  59% {
-    width: 98.36%;
-  }
-
-  73% {
-    width: 100.58%;
-  }
-
-  88% {
-    width: 99.8%;
-  }
-
-  100% {
-    width: 100%;
   }
 }

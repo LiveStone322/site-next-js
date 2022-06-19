@@ -1,9 +1,9 @@
-import React from "react";
-import Link from "next/link";
+import React, { SyntheticEvent, useMemo } from "react";
 import MODULES from "../../../constants/modules";
 import classes from "./Header.module.scss";
 import { useRouter } from "next/router";
 import classNames from "classnames";
+import ListItem from "./components/ListItem";
 
 const Header = () => {
   const router = useRouter();
@@ -17,9 +17,14 @@ const Header = () => {
             [classes.activeLink]: isActive,
           });
           return (
-            <li className={className} key={module.id}>
-              <Link href={module.link}>{module.name}</Link>
-            </li>
+            <ListItem
+              className={className}
+              isActive={isActive}
+              to={module.link}
+              key={module.id}
+            >
+              {module.name}
+            </ListItem>
           );
         })}
       </ul>
